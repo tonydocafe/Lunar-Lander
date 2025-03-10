@@ -12,7 +12,7 @@ pip install gymnasium[box2d] stable-baselines3 pygame numpy matplotlib
 
 ## Treinamento do Modelo
 
-O script `train.py` treina um agente DQN para jogar o LunarLander e salva o modelo treinado.
+O script `aprendizado.py` treina um agente DQN para jogar o LunarLander e salva o modelo treinado.
 
 ### Execução
 
