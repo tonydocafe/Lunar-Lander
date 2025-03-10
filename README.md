@@ -47,7 +47,7 @@ python visualize.py
 ```
 .
 ├── aprendizado.py         # Script de treinamento do agente
-├── visualize.py     # Script de visualização do agente treinado
+├── visualização.py     # Script de visualização do agente treinado
 ├── dqn_lunar.zip    # Modelo treinado salvo
 └── README.md        # Este arquivo
 ```
