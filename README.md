@@ -17,7 +17,7 @@ O script `aprendizado.py` treina um agente DQN para jogar o LunarLander e salva 
 ### Execução
 
 ```bash
-python train.py
+python aprendizado.py
 ```
 
 ### O que o script faz:
