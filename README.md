@@ -34,7 +34,7 @@ O script `visualização.py` carrega o modelo treinado e permite visualizar o ag
 ### Execução
 
 ```bash
-python visualize.py
+python visualização.py
 ```
 
 ### O que o script faz:
@@ -53,7 +53,7 @@ python visualize.py
 ```
 
 ## Observações
-- Certifique-se de que `dqn_lunar.zip` foi gerado antes de executar `visualize.py`.
+- Certifique-se de que `dqn_lunar.zip` foi gerado antes de executar `visualização.py`.
 - Se a janela não fechar ao clicar no **X**, pressione **Enter** no terminal para encerrar o programa corretamente.
 
 ## Autor
