@@ -29,7 +29,7 @@ python aprendizado.py
 
 ## Visualização do Modelo Treinado
 
-O script `visualize.py` carrega o modelo treinado e permite visualizar o agente jogando.
+O script `visualização.py` carrega o modelo treinado e permite visualizar o agente jogando.
 
 ### Execução
 
