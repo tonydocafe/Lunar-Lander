@@ -34,3 +34,31 @@ Valores mais baixos (~0.8) focam mais em recompensas imediatas.
 mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)  
 
 Isso garante que a avaliação não dependa de um único episódio e tenha uma métrica mais estável.
+
+
+
+3-Saídas
+
+* dqn_lunar_0 (primeira teste - padrão)
+
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 829      |
+|    ep_rew_mean      | 4.84     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 328      |
+|    fps              | 205      |
+|    time_elapsed     | 970      |
+|    total_timesteps  | 199128   |
+| train/              |          |
+|    learning_rate    | 0.001    |
+|    loss             | 0.474    |
+|    n_updates        | 47281    |
+----------------------------------
+
+Recompensa média: -128.26 ± 73.87
+
+
+
+
