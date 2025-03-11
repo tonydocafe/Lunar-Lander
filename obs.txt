@@ -60,6 +60,59 @@ Isso garante que a avaliação não dependa de um único episódio e tenha uma m
 Recompensa média: -128.26 ± 73.87
 
 timestep - 200_000
+learning_rate - 1e-3(1 * 10^(-3) = 0.001)
+gamma - 0.99 
+n_eval_episodes = 10 
 
 
 
+* dqn_lunar_1 (segundo teste - amplo)
+
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 238      |
+|    ep_rew_mean      | -381     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 1800     |
+|    fps              | 323      |
+|    time_elapsed     | 1540     |
+|    total_timesteps  | 498805   |
+| train/              |          |
+|    learning_rate    | 0.005    |
+|    loss             | 3.26     |
+|    n_updates        | 122201   |
+----------------------------------
+
+Recompensa média: -364.51 ± 50.96
+
+
+timestep - 500_000
+learning_rate - 5e-3 (5 * 10^(-3) = 0.005)
+gamma - 0.999 
+n_eval_episodes = 50 
+
+* dqn_lunar_2 (terceiro teste - definido)
+
+----------------------------------
+| rollout/            |          |
+|    ep_len_mean      | 829      |
+|    ep_rew_mean      | 4.84     |
+|    exploration_rate | 0.05     |
+| time/               |          |
+|    episodes         | 328      |
+|    fps              | 205      |
+|    time_elapsed     | 970      |
+|    total_timesteps  | 199128   |
+| train/              |          |
+|    learning_rate    | 0.001    |
+|    loss             | 0.474    |
+|    n_updates        | 47281    |
+----------------------------------
+
+Recompensa média: -128.26 ± 73.87
+
+timestep - 200_000
+learning_rate - 1e-3(1 * 10^(-3) = 0.001)
+gamma - 0.99 
+n_eval_episodes = 10 
