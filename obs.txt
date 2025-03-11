@@ -39,6 +39,8 @@ Isso garante que a avaliação não dependa de um único episódio e tenha uma m
 
 3-Saídas
 
+- Modelo treinado 
+
 * dqn_lunar_0 (primeira teste - padrão)
 
 ----------------------------------
