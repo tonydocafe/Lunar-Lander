@@ -27,7 +27,8 @@ model = DQN(...learning_rate=1e-3,...)
 
 
 * fator de desconto (gamma) 
-Determina o peso das recompensas futuras na decisão do agente.
+
+{Determina o peso das recompensas futuras na decisão do agente.Valores altos fazem o agente planejar a longo prazo; valores baixos fazem ele agir de forma mais imediatista.}
 
 
 
@@ -35,6 +36,10 @@ model = DQN(...gamma=0.99,...)
 
 
 * episódios na avaliação
+
+{Número de episódios executados para avaliar o desempenho do agente após o treinamento.Não aprende durante a avaliação, apenas executa ações com a política treinada.}
+
+
 
 mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)  
 
