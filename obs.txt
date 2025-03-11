@@ -59,6 +59,7 @@ Isso garante que a avaliação não dependa de um único episódio e tenha uma m
 
 Recompensa média: -128.26 ± 73.87
 
+timestep - 200_000
 
 
 
