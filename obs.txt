@@ -11,22 +11,27 @@ source ambiente/bin/activate
 
 * número de timesteps
 
+{ Esse parâmetro define quantas interações a IA terá com o ambiente durante o treinamento. Aprende a partir das interações com o ambiente, ajustando sua política com base nas recompensas recebidas.}
+
+
 model.learn(total_timesteps=int(200_000), progress_bar=True)
+
+
 
 * taxa de aprendizado (learning_rate) 
 
-model = DQN(...learning_rate=1e-3,...)
+{Define o tamanho do ajuste nos pesos da rede neural em cada atualização.Se adapta mais rápido com valores altos, mas pode oscilar; valores baixos tornam o aprendizado mais estável, mas mais lento.}
 
-Um valor menor evita oscilações e melhora a convergência.
-Um valor muito baixo pode fazer o aprendizado ser muito lento.
+
+model = DQN(...learning_rate=1e-3,...)
 
 
 * fator de desconto (gamma) 
+Determina o peso das recompensas futuras na decisão do agente.
+
+
 
 model = DQN(...gamma=0.99,...)
-
-Valores mais altos (~0.99) priorizam recompensas futuras.
-Valores mais baixos (~0.8) focam mais em recompensas imediatas.
 
 
 * episódios na avaliação
