@@ -134,7 +134,6 @@ n_eval_episodes - 5
 mudanças de arquivos foram feitas em :  
 
 model.save("...")
+print("...")
 
-
-
-"
+model = 
