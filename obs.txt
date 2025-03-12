@@ -135,5 +135,5 @@ mudanças de arquivos foram feitas em :
 
 model.save("...")
 print("...")
-
-model = 
+...
+model = DQN.load("...",env=env)
