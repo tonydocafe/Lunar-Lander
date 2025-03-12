@@ -129,3 +129,12 @@ timestep - 50_000
 learning_rate - 1e-4 (1 * 10^(-4) = 0.0001)
 gamma - 0.85 
 n_eval_episodes - 5 
+
+
+mudanças de arquivos foram feitas em :  
+
+model.save("...")
+
+
+
+"
