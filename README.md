@@ -66,8 +66,8 @@ model = DQN(
 print("Iniciando treinamento...")
 model.learn(total_timesteps=int(200_000), progress_bar=True)
 ```
-- **model.learn()**: Treina o agente por 200.000 timesteps.
-- **progress_bar=True**: Exibe o progresso do treinamento.
+**model.learn()**: Treina o agente por 200.000 timesteps.
+**progress_bar=True**: Exibe o progresso do treinamento.
 
 ### 5️⃣ Salvando o Modelo Treinado
 ```python
