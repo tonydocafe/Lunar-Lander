@@ -116,11 +116,15 @@ pip install gymnasium numpy stable-baselines3
 
 ### 2️⃣ Execute o script
 ```bash
-python dqn_lunar.py
+python3 aprendizado.py
 ```
 
 ### 3️⃣ Assista ao pouso (ou explosão)!
 Se tudo der certo, seu agente pousará suavemente. Se não... bem, foguetes são difíceis de pilotar! 😆
+
+```bash
+python3 visualização.py
+```
 
 ---
 
