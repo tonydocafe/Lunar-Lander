@@ -74,7 +74,7 @@ model.learn(total_timesteps=int(200_000), progress_bar=True)
 model.save("dqn_lunar")
 print("Modelo salvo como dqn_lunar.zip")
 ```
-- **model.save("dqn_lunar")**: Salva o modelo treinado em um arquivo ZIP.
+**model.save("dqn_lunar")**: Salva o modelo treinado em um arquivo ZIP.
 
 ### 6️⃣ Recarregando o Modelo
 ```python
@@ -82,17 +82,17 @@ del model
 model = DQN.load("dqn_lunar", env=env)
 print("Modelo carregado!")
 ```
-- **del model**: Remove o modelo da memória.
-- **DQN.load("dqn_lunar", env=env)**: Carrega o modelo salvo e associa ao ambiente.
+**del model**: Remove o modelo da memória.
+**DQN.load("dqn_lunar", env=env)**: Carrega o modelo salvo e associa ao ambiente.
 
 ### 7️⃣ Avaliação do Agente
 ```python
 mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)
 print(f"Recompensa média: {mean_reward:.2f} ± {std_reward:.2f}")
 ```
-- **evaluate_policy()**: Mede o desempenho do agente com 10 episódios de teste.
-- **mean_reward**: Média das recompensas obtidas.
-- **std_reward**: Desvio padrão das recompensas.
+**evaluate_policy()**: Mede o desempenho do agente com 10 episódios de teste.
+ **mean_reward**: Média das recompensas obtidas.
+**std_reward**: Desvio padrão das recompensas.
 
 ### 8️⃣ Executando o Agente Treinado
 ```python
