@@ -25,8 +25,7 @@ O **Gymnasium** fornece o ambiente de simulação, enquanto o **NumPy** é utili
 ```python
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
 ```
-**gym.make()** cria um ambiente de simulação baseado no jogo Lunar Lander.
-**render_mode="rgb_array"** configura a renderização para capturar imagens.
+O **gym.make()** cria um ambiente de simulação baseado no jogo **Lunar Lander**, permitindo a interação com o ambiente. A opção **render_mode="rgb_array"** configura a renderização para capturar imagens do jogo em formato de array RGB, possibilitando o processamento visual se necessário.
 
 ### 3️⃣ Definição do Modelo DQN
 ```python
