@@ -127,7 +127,7 @@ python3 visualização.py
 ```
 
 ---
-                                        **Imagens dos testes**
+                                      
 
 ![Imagem Exemplo](etc/dqn_1.png)
 -
