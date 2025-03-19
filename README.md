@@ -127,9 +127,11 @@ python3 visualização.py
 ```
 
 ---
+                                        **Imagens dos testes**
 
-## 🏆 Conclusão
-Este README explica cada linha do script e como o Python interpreta os comandos. Agora, você pode entender e modificar o código para melhor desempenho ou criar novas versões! 🚀😃
-
-Divirta-se e bons experimentos! 🧪
-
+![Imagem Exemplo](etc/dqn_1.png)
+-
+![Imagem Exemplo](etc/dqn_2.png)
+-
+![Imagem Exemplo](etc/dqn_1.png)
+-
