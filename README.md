@@ -19,10 +19,7 @@ import numpy as np
 from stable_baselines3 import DQN
 from stable_baselines3.common.evaluation import evaluate_policy
 ```
-**gymnasium**: Fornece o ambiente de simulação.
-**numpy**: Usado para operações matemáticas e manipulação de arrays.
-**DQN**: O algoritmo de aprendizado por reforço baseado em Q-Learning profundo.
-**evaluate_policy**: Função que avalia o desempenho do agente após o treinamento.
+O **Gymnasium** fornece o ambiente de simulação, enquanto o **NumPy** é utilizado para operações matemáticas e manipulação de arrays. O algoritmo **DQN** aplica aprendizado por reforço baseado em Q-Learning profundo. Por fim, a função **evaluate_policy** avalia o desempenho do agente após o treinamento.
 
 ### 2️⃣ Criando o Ambiente
 ```python
