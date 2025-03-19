@@ -133,5 +133,5 @@ python3 visualização.py
 -
 ![Imagem Exemplo](etc/dqn_2.png)
 -
-![Imagem Exemplo](etc/dqn_1.png)
+![Imagem Exemplo](etc/dqn_3.png)
 -
