@@ -108,11 +108,11 @@ for i in range(1000):
     if done:
         obs, _ = env.reset()
 ```
-- **env.reset()**: Reinicia o ambiente.
-- **model.predict(obs, deterministic=True)**: Escolhe a melhor ação baseada na política treinada.
-- **env.step(action)**: Aplica a ação ao ambiente.
-- **env.render()**: Renderiza a simulação.
-- **if done:** Reinicia o ambiente ao final do episódio.
+**env.reset()**: Reinicia o ambiente.
+**model.predict(obs, deterministic=True)**: Escolhe a melhor ação baseada na política treinada.
+**env.step(action)**: Aplica a ação ao ambiente.
+**env.render()**: Renderiza a simulação.
+**if done:** Reinicia o ambiente ao final do episódio.
 
 ### 9️⃣ Fechando o Ambiente
 ```python
