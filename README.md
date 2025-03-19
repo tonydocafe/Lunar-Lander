@@ -44,18 +44,7 @@ model = DQN(
     target_update_interval=1000,
 )
 ```
- **policy="MlpPolicy"**: Política de aprendizado baseada em redes neurais MLP (Multilayer Perceptron).
-**env=env**: Associa o modelo ao ambiente.
-**verbose=1**: Informações sobre o treinamento.
-**learning_rate=1e-3**: Taxa de aprendizado.
-**buffer_size=100_000**: Tamanho do buffer de replay.
-**learning_starts=10_000**: Começa a aprender após 10.000 interações.
-**batch_size=64**: Tamanho do lote para treinamento.
-**gamma=0.99**: Fator de desconto para aprendizado futuro.
-**exploration_fraction=0.1**: Fracionamento da exploração durante o treinamento.
-**exploration_final_eps=0.05**: Limite inferior da exploração.
-**train_freq=4**: Frequência de treinamento.
-**target_update_interval=1000**: Intervalo para atualizar a rede-alvo.
+A **policy="MlpPolicy"** define uma política de aprendizado baseada em redes neurais MLP (Multilayer Perceptron). O parâmetro **env=env** associa o modelo ao ambiente de simulação. Com **verbose=1**, são fornecidas informações sobre o treinamento. A **learning_rate=1e-3** define a taxa de aprendizado, enquanto **buffer_size=100_000** especifica o tamanho do buffer de replay. O aprendizado começa após **learning_starts=10_000** interações, com **batch_size=64** para o tamanho do lote. O **gamma=0.99** é o fator de desconto para aprendizado futuro, e **exploration_fraction=0.1** regula a exploração. O limite inferior da exploração é dado por **exploration_final_eps=0.05**. A **train_freq=4** indica a frequência de treinamento, e **target_update_interval=1000** define o intervalo para atualizar a rede-alvo.
 
 ### 4️⃣ Treinamento do Modelo
 ```python
