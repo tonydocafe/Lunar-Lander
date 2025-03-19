@@ -28,8 +28,8 @@ from stable_baselines3.common.evaluation import evaluate_policy
 ```python
 env = gym.make("LunarLander-v3", render_mode="rgb_array")
 ```
-- **gym.make()** cria um ambiente de simulação baseado no jogo Lunar Lander.
-- **render_mode="rgb_array"** configura a renderização para capturar imagens.
+**gym.make()** cria um ambiente de simulação baseado no jogo Lunar Lander.
+**render_mode="rgb_array"** configura a renderização para capturar imagens.
 
 ### 3️⃣ Definição do Modelo DQN
 ```python
