@@ -36,7 +36,7 @@ while running:
     enter_pressed = threading.Event()
 
     def wait_for_input():
-        input("Pressione Enter para fechar a janela...")
+        input("Press ENTER to exit...")
         enter_pressed.set()
 
     input_thread = threading.Thread(target=wait_for_input, daemon=True)
