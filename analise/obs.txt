@@ -1,137 +1,122 @@
-1-Ambiente:
+1-Environment:
 
-* Utilizei um ambiente python onde instalei todas dependencias
+* I used a python environment where I installed all dependencies
 
-python3 -m venv ambiente
-source ambiente/bin/activate
+python3 -m venv environment
+source environment/bin/activate
 
-2-Parâmetros:
+2-Parameters:
 
-- Alterações para análise de resultados -
+- Changes for results analysis -
 
-* número de timesteps
+* number of timesteps
 
-{ Esse parâmetro define quantas interações a IA terá com o ambiente durante o treinamento. Aprende a partir das interações com o ambiente, ajustando sua política com base nas recompensas recebidas.}
-
+{ This parameter defines how many interactions the AI ​​will have with the environment during training. It learns from interactions with the environment, adjusting its policy based on the rewards received.}
 
 model.learn(total_timesteps=int(200_000), progress_bar=True)
 
+* learning rate (learning_rate)
 
-
-* taxa de aprendizado (learning_rate) 
-
-{Define o tamanho do ajuste nos pesos da rede neural em cada atualização.Se adapta mais rápido com valores altos, mas pode oscilar; valores baixos tornam o aprendizado mais estável, mas mais lento.}
-
+{ Defines the size of the adjustment in the neural network weights in each update. It adapts faster with high values, but it can fluctuate; low values ​​make learning more stable, but slower.}
 
 model = DQN(...learning_rate=1e-3,...)
 
+* discount factor (gamma)
 
-* fator de desconto (gamma) 
-
-{Determina o peso das recompensas futuras na decisão do agente.Valores altos fazem o agente planejar a longo prazo; valores baixos fazem ele agir de forma mais imediatista.}
-
-
+{Determines the weight of future rewards in the agent's decision. High values ​​make the agent plan in the long term; low values ​​make it act more immediately.}
 
 model = DQN(...gamma=0.99,...)
 
+* episodes in the evaluation
 
-* episódios na avaliação
+{Number of episodes executed to evaluate the agent's performance after training. It does not learn during the evaluation, it only executes actions with the trained policy.}
 
-{Número de episódios executados para avaliar o desempenho do agente após o treinamento.Não aprende durante a avaliação, apenas executa ações com a política treinada.}
+mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)
 
+This ensures that the evaluation does not depend on a single episode and has a more stable metric.
 
+3-Outputs
 
-mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)  
+- Trained model
 
-Isso garante que a avaliação não dependa de um único episódio e tenha uma métrica mais estável.
-
-
-
-3-Saídas
-
-- Modelo treinado 
-
-* dqn_lunar_0 (primeira teste - padrão)
+* dqn_lunar_0 (first test - default)
 
 ----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 829      |
-|    ep_rew_mean      | 4.84     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 328      |
-|    fps              | 205      |
-|    time_elapsed     | 970      |
-|    total_timesteps  | 199128   |
-| train/              |          |
-|    learning_rate    | 0.001    |
-|    loss             | 0.474    |
-|    n_updates        | 47281    |
-----------------------------------
+| rollout/ | |
+| ep_len_mean | 829 |
+| ep_rew_mean | 4.84 |
+| exploration_rate | 0.05 |
+| time/ | | | episodes | 328 |
+| fps | 205 |
+| time_elapsed | 970 |
+| total_timesteps | 199128 |
+| train/ | |
+| learning_rate | 0.001 |
+| loss | 0.474 |
+| n_updates | 47281 | ----------------------------------
 
-Recompensa média: -128.26 ± 73.87
+Average reward: -128.26 ± 73.87
 
 timestep - 200_000
 learning_rate - 1e-3(1 * 10^(-3) = 0.001)
-gamma - 0.99 
-n_eval_episodes - 10 
+gamma - 0.99
+n_eval_episodes - 10
 
 
 
-* dqn_lunar_1 (segundo teste - amplo)
+* dqn_lunar_1 (second test - wide)
 
 ----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 238      |
-|    ep_rew_mean      | -381     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 1800     |
-|    fps              | 323      |
-|    time_elapsed     | 1540     |
-|    total_timesteps  | 498805   |
-| train/              |          |
-|    learning_rate    | 0.005    |
-|    loss             | 3.26     |
-|    n_updates        | 122201   |
+| rollout/ | |
+| ep_len_mean | 238 |
+| ep_rew_mean | -381 |
+| exploration_rate | 0.05 |
+| time/ | |
+| episodes | 1800 |
+| fps | 323 |
+| time_elapsed | 1540 |
+| total_timesteps | 498805 |
+| train/ | |
+| learning_rate | 0.005 |
+| loss | 3.26 |
+| n_updates | 122201 |
 ----------------------------------
 
-Recompensa média: -364.51 ± 50.96
+Average reward: -364.51 ± 50.96
 
 
 timestep - 500_000
 learning_rate - 5e-3 (5 * 10^(-3) = 0.005)
-gamma - 0.999 
-n_eval_episodes - 50 
+gamma - 0.999
+n_eval_episodes - 50
 
-* dqn_lunar_2 (terceiro teste - definido)
+* dqn_lunar_2 (third test - defined)
 
 ----------------------------------
-| rollout/            |          |
-|    ep_len_mean      | 390      |
-|    ep_rew_mean      | -246     |
-|    exploration_rate | 0.05     |
-| time/               |          |
-|    episodes         | 200      |
-|    fps              | 323      |
-|    time_elapsed     | 150      |
-|    total_timesteps  | 48687    |
-| train/              |          |
-|    learning_rate    | 0.0001   |
-|    loss             | 0.914    |
-|    n_updates        | 9671     |
+| rollout/ | |
+| ep_len_mean | 390 |
+| ep_rew_mean | -246 |
+| exploration_rate | 0.05 |
+| time/ | |
+| episodes | 200 |
+| fps | 323 |
+| time_elapsed | 150 |
+| total_timesteps | 48687 |
+| train/ | |
+| learning_rate | 0.0001 |
+| loss | 0.914 |
+| n_updates | 9671 |
 ----------------------------------
 
-Recompensa média: -91.90 ± 29.75
-
+Average reward: -91.90 ± 29.75
 
 timestep - 50_000
 learning_rate - 1e-4 (1 * 10^(-4) = 0.0001)
-gamma - 0.85 
-n_eval_episodes - 5 
+gamma - 0.85
 
+n_eval_episodes - 5
 
-mudanças de arquivos foram feitas em :  
+file changes were made in :
 
 model.save("...")
 print("...")
