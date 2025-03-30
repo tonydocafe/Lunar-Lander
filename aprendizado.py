@@ -3,7 +3,7 @@ import numpy as np
 from stable_baselines3 import DQN
 from stable_baselines3.common.evaluation import evaluate_policy
 
-env = gym.make("LunarLander-v3", render_mode="rgb_array")
+env = gym.make("LunarLander-v3", render_mode="rgb_array") # creating an instance in tthe environment and rendering the simulation in a sequence of images
 
 model = DQN(
     policy="MlpPolicy",
