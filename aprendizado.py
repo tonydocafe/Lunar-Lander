@@ -21,7 +21,7 @@ model = DQN(
 )
 
 print("Iniciando treinamento...")
-model.learn(total_timesteps=int(200_000), progress_bar=True) # learn from class DQN
+model.learn(total_timesteps=int(200_000), progress_bar=True) # learn of the DQN like most other methods
 
 model.save("dqn_lunar")
 print("Modelo salvo como dqn_lunar.zip")
