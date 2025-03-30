@@ -21,7 +21,7 @@ model = DQN(
 )
 
 print("Iniciando treinamento...")
-model.learn(total_timesteps=int(200_000), progress_bar=True)
+model.learn(total_timesteps=int(200_000), progress_bar=True) # learn from class DQN
 
 model.save("dqn_lunar")
 print("Modelo salvo como dqn_lunar.zip")
@@ -31,7 +31,7 @@ del model
 model = DQN.load("dqn_lunar", env=env)
 print("Modelo carregado!")
 
-mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10)
+mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=10) 
 print(f"Recompensa média: {mean_reward:.2f} ± {std_reward:.2f}")
 
 obs, _ = env.reset()
